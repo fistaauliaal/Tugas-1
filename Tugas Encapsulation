@@ -1,0 +1,43 @@
+class Rumah:
+    def __init__(self, warna, panjang, lebar, tinggi):
+        self.__warna = warna    
+        self.__panjang = panjang  
+        self.lebar = lebar
+        self.tinggi = tinggi
+
+    def get_warna(self):
+        return self.__warna
+
+    def set_warna(self, warna):
+        self.__warna = warna
+
+    def get_panjang(self):
+        return self.__panjang
+
+    def set_panjang(self, panjang):
+        self.__panjang = panjang
+
+    def nyalakan(self, perangkat):
+        print(f"{perangkat} dinyalakan.")
+
+    def matikan(self, perangkat):
+        print(f"{perangkat} dimatikan.")
+
+
+rumah1 = Rumah("Putih", 200, 150, 100)
+
+print("Warna rumah:", rumah1.get_warna())    
+print("Panjang rumah:", rumah1.get_panjang()) 
+
+rumah1.set_warna("Biru")
+rumah1.set_panjang(250)
+
+print("Warna rumah setelah diubah:", rumah1.get_warna())    
+print("Panjang rumah setelah diubah:", rumah1.get_panjang()) 
+
+rumah1.nyalakan("AC")
+rumah1.nyalakan("Lampu")
+rumah1.nyalakan("Air")
+rumah1.matikan("AC")
+rumah1.matikan("Lampu")
+rumah1.matikan("Air")
